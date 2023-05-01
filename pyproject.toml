@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "store-env"
+version = "0.0.1"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "store_env"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.11"
+tqdm = "^4.65.0"
+wandb = "^0.14.2"
+torch = "^2.0.0"
+tensorboard = "^2.12.1"
+gymnasium = {extras = ["box2d", "mujoco"], version = "^0.28.1"}
+minigrid = "2.1.1"
+stable-baselines3 = { version = ">=2.0.0a1", optional = true }
+moviepy = { version = "^1.0.3", optional = true }
+
+[tool.poetry.extras]
+sb3 = ["stable-baselines3"]
+video=["moviepy"]
+all = ["stable-baselines3", "moviepy"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
