@@ -11,6 +11,7 @@ A fast and customizable gymnasium-compatible retail store environment for reinfo
 4. [Optional] To use Weights and Biases, please also do `wandb login`.
 
 ## Reproducing our results
+_Note: benchmark results are plotted to TensorBoard and Weights and Biases. To disable Weights and Biases, remove the `--track` flag from the scripts below._
 ### Benchmarking PPO implementation
 To reproduce our PPO benchmarking results, run the `benchmark.sh` script as follows:
 ```sh
